@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Navbar = () => {
   return (
     <div className='grid justify-self-stretch shadow-sm bg-white'>

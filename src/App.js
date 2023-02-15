@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import './index.css';
+import './input.css';
 function App() {
   return (
     <div className="App">

@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className='grid justify-self-stretch  p-6 shadow-md bg-white'>
-      <h1 className=' justify-self-start '><span className='text-3xl font-bold '>JuEats</span></h1>
+      <a href={'#'} className=' justify-self-start '><span className='text-3xl font-bold '>JuEats</span></a>
       <div className=' justify-self-center'>
          <div className='hidden  lg:flex flex-row' style={{marginTop:"-20px" }}>
           

@@ -1,11 +1,14 @@
 import React from 'react'
-
-const hero = () => {
+import BTN from './snippets/clickBTN'
+const Hero = () => {
   return (
-    <div className='w-full h-full relative block bg-black'>
-      
+    <div className='w-full grid justify-self-center justify-items-center bg-black' style={{height:'30vh'}}>
+        
+       <div className='jusify-self-center'> 
+      <BTN  value="Learn More"/>
+      </div>
     </div>
   )
 }
 
-export default hero
+export default Hero

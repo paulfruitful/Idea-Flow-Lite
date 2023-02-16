@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import hero from "./components/hero";
 import './input.css';
 function App() {
   return (

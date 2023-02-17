@@ -9,7 +9,5 @@ const BTN = ({value}) => {
   )
 }
 
-BTN.propTypes = {
-     value:PropTypes.string.isRequired
-}
+
 export default BTN

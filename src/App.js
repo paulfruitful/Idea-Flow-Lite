@@ -3,7 +3,7 @@ import { useState,useEffect } from "react";
 import Hero from "./components/hero";
 import './input.css';
 function App() {
- const [ideas,setIdeas]=useState('Hello')
+ const [ideas,setIdeas]=useState('')
 
 useEffect(()=>{
    fetch('http://127.0.0.1:8000/api/ideas')
@@ -14,7 +14,7 @@ console.log(ideas)
   return (
     <div className="App" >
      <Navbar/>
-     <Hero onClick={()=>setIdeas('Me')}/>
+     <Hero />
    
     </div>
   );

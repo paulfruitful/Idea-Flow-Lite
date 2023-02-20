@@ -5,10 +5,15 @@ import './input.css';
 function App() {
  const [ideas,setIdeas]=useState('')
 
+ const getIdeas=async()=>{
+   const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
+   const result=await fetched.json()
+   setIdeas(result)
+ }
+
 useEffect(()=>{
-   fetch('http://127.0.0.1:8000/api/ideas')
-   .then((res)=>res.json())
-   .then(data=>setIdeas(data))},[])
+  getIdeas() },[])
+
 
 console.log(ideas)
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const idea = ({name}) => {
+const Idea = ({name}) => {
   return (
     <div>
       <h1>{name}</h1>
@@ -8,4 +8,4 @@ const idea = ({name}) => {
   )
 }
 
-export default idea
+export default Idea

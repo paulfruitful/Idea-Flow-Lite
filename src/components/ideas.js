@@ -1,14 +1,23 @@
 import React from 'react'
-import idea from './idea'
+import Idea from './idea'
+import { useState } from 'react'
 
-const ideas = ({ideas}) => {
+const Ideas = ({ideas}) => {
+   const [dummy,setDummy]=useState(['Me','DE', 'RE'])
   return (
     <div>
-      {ideas.forEach(idea => {
-        <idea idea={idea.title}/>
-      })}
-    </div>
-  )
+        {
+            Array.from(dummy).map(element => {
+              return <Idea name={element}/>
+            })
 }
+      
+        <Idea name={ideas}/>
+              
+ 
+    </div>
+   
+  )}
 
-export default ideas
+
+export default Ideas

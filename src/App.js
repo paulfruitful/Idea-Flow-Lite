@@ -7,11 +7,8 @@ function App() {
 
 useEffect(()=>{
    fetch('http://127.0.0.1:8000/api/ideas')
-   .then(
-    (res)=>{return res.json()}
-   )
-   .then(data=>{setIdeas(data)})
-},[])
+   .then((res)=>res.json())
+   .then(data=>setIdeas(data))},[])
 
 console.log(ideas)
   return (

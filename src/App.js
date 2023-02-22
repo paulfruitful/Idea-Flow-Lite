@@ -21,7 +21,7 @@ console.log(ideas)
     <div className="App" >
      <Navbar/>
      <Hero />
-    <Ideas ideas='me'/>
+    <Ideas ideas={ideas}/>
     </div>
   );
 }

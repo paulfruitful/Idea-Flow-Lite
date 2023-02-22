@@ -3,12 +3,12 @@ import Idea from './idea'
 import { useState } from 'react'
 
 const Ideas = ({ideas}) => {
-   const [dummy,setDummy]=useState(['Me','DE', 'RE'])
+   
   return (
     <div>
         {
-            Array.from(dummy).map(element => {
-              return <Idea name={element}/>
+            Array.from(ideas).map(element => {
+              return <Idea name={element.title}/>
             })
 }
       

@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import { useState,useEffect } from "react";
 import Hero from "./components/hero";
-import Ideas from "./components/ideas";
+import Form from "./components/form"
 import './input.css';
 function App() {
  const [ideas,setIdeas]=useState([])
@@ -23,6 +23,7 @@ console.log(ideas)
     <div className="App" >
      <Navbar/>
      <Hero />
+     <Form/>
        </div>
   );
 }

@@ -9,7 +9,7 @@ const Ideas = ({ideas}) => {
         {
           ideas.forEach( (element) => {
               
-              return <Idea name={element.title} key={element.key}/>
+              return <Idea name={element.title} />
             })
 }
       

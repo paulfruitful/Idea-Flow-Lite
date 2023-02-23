@@ -7,9 +7,9 @@ const Ideas = ({ideas}) => {
   return (
     <div>
         {
-            Array.from(ideas).map( (element,id) => {
-              id++
-              return <Idea name={element.title} key={id}/>
+          ideas.forEach( (element) => {
+              
+              return <Idea name={element.title} key={element.key}/>
             })
 }
       

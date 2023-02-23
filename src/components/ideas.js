@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 
 const idea=[
-  {title:'Fine'}, {title:'Fine'},{title:'Fine'}
+  {id:1,title:'Fine'}, {id:2, title:'Fine'},{id:3,title:'Fine'}
 ]
 
 const Ideas = ({ideas}) => {
@@ -14,7 +14,7 @@ const Ideas = ({ideas}) => {
         {
           idea.forEach( (element) => {
               
-              return <Idea name={element.title} />
+              return <Idea name={element.title} key={element.id}/>
             })
 }
       

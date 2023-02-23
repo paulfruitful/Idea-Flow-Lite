@@ -1,6 +1,8 @@
 import React from 'react'
+import { useState } from 'react'
 
 const form = () => {
+   let [hero,setHero]=useState('')
   return (
     <div>
       <form className='grid  p-6 shadow-sm  justify-items-center '>

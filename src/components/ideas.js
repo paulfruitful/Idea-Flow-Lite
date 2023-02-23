@@ -12,7 +12,7 @@ const Ideas = ({ideas}) => {
   return (
     <div>
         {
-          idea.forEach( (element) => {
+          idea.map( (element) => {
               
               return <Idea name={element.title} key={element.id}/>
             })

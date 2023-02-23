@@ -17,13 +17,16 @@ function App() {
   
 },[])
 */
+const submitForm=(value)=>{
+    //setIdeas(value)
+    console.log(value)
+}
 
-console.log(ideas)
   return (
     <div className="App" >
      <Navbar/>
      <Hero />
-     <Form/>
+     <Form  onValue={submitForm} />
        </div>
   );
 }

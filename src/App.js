@@ -4,8 +4,7 @@ import Hero from "./components/hero";
 import Ideas from "./components/ideas";
 import './input.css';
 function App() {
- const [ideas,setIdeas]=useState([
-  {title:'Fine'}, {title:'Fine'},{title:'Fine'}])
+ const [ideas,setIdeas]=useState([])
 
  const getIdeas=async()=>{
    const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
@@ -24,8 +23,7 @@ console.log(ideas)
     <div className="App" >
      <Navbar/>
      <Hero />
-    <Ideas ideas={ideas}/>
-    </div>
+       </div>
   );
 }
 

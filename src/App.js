@@ -4,7 +4,7 @@ import Hero from "./components/hero";
 import Form from "./components/form"
 import './input.css';
 function App() {
- const [ideas,setIdeas]=useState([])
+ const [ideas,setIdeas]=useState('')
 
  const getIdeas=async()=>{
    const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
@@ -19,14 +19,16 @@ function App() {
 */
 const submitForm=(value)=>{
     //setIdeas(value)
+    setIdeas(value)
     console.log(value)
 }
 
   return (
     <div className="App" >
      <Navbar/>
-     <Hero />
      <Form  onValue={submitForm} />
+     <Hero text={ideas} />
+     
        </div>
   );
 }

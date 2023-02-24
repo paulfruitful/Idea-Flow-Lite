@@ -18,7 +18,7 @@ const Ideas = ({ideas}) => {
             })
 }
       
-        <Idea name={ideas}/>
+      
               
  
     </div>

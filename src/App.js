@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import { useState,useEffect } from "react";
 import Hero from "./components/hero";
 import Form from "./components/form"
+import Ideas from "./components/ideas";
 import './input.css';
 function App() {
  const [ideas,setIdeas]=useState('')
@@ -28,6 +29,7 @@ const submitForm=(value)=>{
      <Navbar/>
      <Form  onValue={submitForm} />
      <Hero text={ideas} />
+     <Ideas/>
      
        </div>
   );

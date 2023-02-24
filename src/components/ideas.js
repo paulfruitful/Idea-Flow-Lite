@@ -12,10 +12,11 @@ const Ideas = ({ideas}) => {
   return (
     <div>
         {
-          idea.map( (element) => {
+        ideas?
+          ideas.map( (element) => {
               
               return <Idea name={element.title} key={element.id}/>
-            })
+            }) : 'No Idea'
 }
       
       

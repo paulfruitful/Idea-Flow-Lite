@@ -5,7 +5,7 @@ import Form from "./components/form"
 import Ideas from "./components/ideas";
 import './input.css';
 function App() {
- const [ideas,setIdeas]=useState('')
+ const [ideas,setIdeas]=useState(null)
 
  const getIdeas=async()=>{
    const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
@@ -13,11 +13,10 @@ function App() {
    setIdeas(result)
  }
 
-/*useEffect(()=>{
+useEffect(()=>{
   getIdeas()
   
 },[])
-*/
 const submitForm=(value)=>{
     //setIdeas(value)
     setIdeas(value)
@@ -28,8 +27,8 @@ const submitForm=(value)=>{
     <div className="App" >
      <Navbar/>
      <Form  onValue={submitForm} />
-     <Hero text={ideas} />
-     <Ideas/>
+     <Hero  />
+     <Ideas ideas={ideas}/>
      
        </div>
   );

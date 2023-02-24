@@ -16,7 +16,7 @@ const Ideas = ({ideas}) => {
         ideas?
           ideas.map( (element) => {
               
-              return <Idea name={element.title} key={element.id} author={element.author}/>
+              return <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/>
             }) : 'No Idea'
 }
       

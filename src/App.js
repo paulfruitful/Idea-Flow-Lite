@@ -23,11 +23,11 @@ const submitForm=(value)=>{
     setIdeas(value)
     console.log(value)
 }
-
-  return (
+console.log(ideas)
+return (
     <div className="App" >
      <Navbar/>
-     <Form  onValue={submitForm} />
+     
      <Hero  />
      <Ideas ideas={ideas}/>
      

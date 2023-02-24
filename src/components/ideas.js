@@ -10,12 +10,13 @@ const idea=[
 const Ideas = ({ideas}) => {
    let id=0
   return (
-    <div>
+    <div className='grid justify-items-center p-6 m-6'>
+      <h1 className='text-xl font-bold p-3'>Idea News</h1>
         {
         ideas?
           ideas.map( (element) => {
               
-              return <Idea name={element.title} key={element.id}/>
+              return <Idea name={element.title} key={element.id} author={element.author}/>
             }) : 'No Idea'
 }
       

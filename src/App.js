@@ -16,6 +16,7 @@ function App() {
 useEffect(()=>{
   getIdeas()
   
+  
 },[])
 const submitForm=(value)=>{
     //setIdeas(value)

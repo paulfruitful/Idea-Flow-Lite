@@ -11,7 +11,7 @@ const Ideas = ({ideas}) => {
    let id=0
   return (
     <div className='grid justify-items-center p-6 m-6'>
-      <h1 className='text-xl font-bold p-3'>Idea News</h1>
+      <h1 className='text-3xl font-bold p-3'>Idea News</h1>
         {
         ideas?
           ideas.map( (element) => {

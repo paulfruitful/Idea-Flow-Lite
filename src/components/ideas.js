@@ -1,6 +1,7 @@
 import React from 'react'
 import Idea from './idea'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,8 +16,7 @@ const Ideas = ({ideas}) => {
         ideas?
           ideas.map( (element) => {
               
-              return <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/>
-            }) : 'No Idea'
+              return <Link to={`/ideas/${element.id}`}> <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/></Link>            }) : 'No Idea'
 }
       </div>
       

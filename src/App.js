@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import { useState,useEffect } from "react";
 import {Route, Routes} from 'react-router-dom'
 import Home from './Home'
+import IdeaPage from "./components/IdeaPage";
 import Form from "./components/form"
 import IdeaPool from "./components/ideaPool";
 import './input.css';
@@ -45,6 +46,7 @@ return (
      <Routes>
       <Route path="/ideas">
         <Route index element={<IdeaPool ideas={ideas}/>}/>
+        <Route path=":id" element={<IdeaPage/>}/>
       </Route>
       <Route path="/" element={<Home ideas={topIdeas}/>}/>
      </Routes>

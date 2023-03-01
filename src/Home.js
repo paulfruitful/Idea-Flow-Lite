@@ -4,11 +4,11 @@ import Ideas from './components/ideas'
 import { useContext } from 'react'
 import { DataContext } from './App'
 const Home = () => {
-  const {ideas}=useContext(DataContext)
+  const {topIdeas}=useContext(DataContext)
   return (
     <div>
        <Hero  />
-     <Ideas ideas={ideas}/>
+     <Ideas ideas={topIdeas}/>
     </div>
   )
 }

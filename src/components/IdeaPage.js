@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { useState,useEffect } from 'react'
+import { useState,useLayoutEffect } from 'react'
 import IdeaHero from './IdeaHero'
 
 const IdeaPage = () => {
@@ -15,7 +15,7 @@ const id=param.id
     setIdea(result)
     
   }
-  useEffect(()=>{
+  useLayoutEffect(()=>{
     getIdea()
   },[])
 

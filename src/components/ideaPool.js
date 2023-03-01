@@ -1,8 +1,10 @@
 import React from 'react'
 import Hero from './hero'
 import Idea from './idea'
-
-const IdeaPool = ({ideas}) => {
+import { useContext } from 'react'
+import { DataContext } from '../App'
+const IdeaPool = () => {
+const {ideas}=useContext(DataContext)
   return (
     <div>
      <Hero/>

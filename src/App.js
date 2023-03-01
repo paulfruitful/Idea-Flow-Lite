@@ -1,12 +1,16 @@
 import Navbar from "./components/Navbar";
-import { useState,useEffect } from "react";
-import {Route, Routes} from 'react-router-dom'
+import { useState,useLayoutEffect,createContext } from "react";
+import {Route, Routes, useLocation} from 'react-router-dom'
 import Home from './Home'
 import IdeaPage from "./components/IdeaPage";
 import Form from "./components/form"
 import IdeaPool from "./components/ideaPool";
 import './input.css';
+
+export const DataContext= createContext(null);
+
 function App() {
+
  const [topIdeas,setTopIdeas]=useState(null)
  const [ideas,setIdeas]=useState(null)
 
@@ -25,11 +29,10 @@ function App() {
   
 }
 
-useEffect(()=>{
+useLayoutEffect(()=>{
   getIdeas()
   getTopIdeas()
-  console.log(ideas)
-  
+
 },[])
 const submitForm=(value)=>{
     //setIdeas(value)
@@ -39,21 +42,22 @@ const submitForm=(value)=>{
 
 return (
   <>
-  
+  <DataContext value={{topIdeas,ideas}}>    
     <div className="App" >
      
     <Navbar/>
      <Routes>
       <Route path="/ideas">
-        <Route index element={<IdeaPool ideas={ideas}/>}/>
+        <Route index element={<IdeaPool/>}/>
         <Route path=":id" element={<IdeaPage/>}/>
       </Route>
-      <Route path="/" element={<Home ideas={topIdeas}/>}/>
+      <Route path="/" element={<Home />}/>
      </Routes>
     
      
        </div>
-     
+     </DataContext>
+
       </>
   );
 }

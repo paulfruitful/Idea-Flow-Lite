@@ -41,8 +41,8 @@ const submitForm=(value)=>{
 }
 
 return (
+  <DataContext.Provider value={{topIdeas,ideas}}>    
   <>
-  <DataContext value={{topIdeas,ideas}}>    
     <div className="App" >
      
     <Navbar/>
@@ -56,9 +56,10 @@ return (
     
      
        </div>
-     </DataContext>
+   
 
-      </>
+      </> 
+       </DataContext.Provider>
   );
 }
 

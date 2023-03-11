@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import { useState,useLayoutEffect,createContext } from "react";
 import {Route, Routes} from 'react-router-dom'
 import Home from './Home'
-import IdeaRoutes from "./Routes/IdeaRoutes";
+import Form from "./components/form";
 import IdeaPage from "./components/IdeaPage";
 import IdeaPool from "./components/ideaPool";
 //import Form from "./components/form"
@@ -15,7 +15,7 @@ function App() {
 
  const [topIdeas,setTopIdeas]=useState(null)
  const [ideas,setIdeas]=useState(null)
-
+const [hero,setHero]=useState('Get Inspired')
  //Get Ideas For The Idea Pool Component
  const getIdeas=async()=>{
    const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
@@ -36,10 +36,8 @@ useLayoutEffect(()=>{
   getTopIdeas()
 
 },[])
-const submitForm=(value)=>{
-    //setIdeas(value)
-    setIdeas(value)
-    console.log(value)
+function  submitForm(){
+  console.log('Hey')
 }
 
 return (
@@ -48,13 +46,14 @@ return (
     <div className="App" >
      
     <Navbar/>
+    <Form submitForm={{submitForm}}/>
      <Routes>
      <Route path="/ideas">
         <Route index element={<IdeaPool/>}/>
         <Route path=":id" element={<IdeaPage/>}/>
       </Route>
-      <IdeaRoutes/>
-      <Route path="/" element={<Home />}/>
+     
+      <Route path="/" element={<Home hero={hero}/>}/>
      </Routes>
     
      

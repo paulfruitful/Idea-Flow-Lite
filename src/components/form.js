@@ -1,11 +1,13 @@
 
 import { useState,useRef} from 'react'
 
-const Form = ({submitForm}) => {
+const Form = ({onForm}) => {
   const value=useRef()
  const changeHero=()=>{
-    submitForm()
-  
+   const call=()=>{
+     onForm()
+   } 
+   call()
  }
   return (
     <div>

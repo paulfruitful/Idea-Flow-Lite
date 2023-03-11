@@ -46,7 +46,7 @@ return (
     <div className="App" >
      
     <Navbar/>
-    <Form submitForm={{submitForm}}/>
+    <Form onForm={{submitForm}}/>
      <Routes>
      <Route path="/ideas">
         <Route index element={<IdeaPool/>}/>

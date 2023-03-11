@@ -3,6 +3,7 @@ import Hero from './hero'
 import Idea from './idea'
 import { useContext } from 'react'
 import { DataContext } from '../App'
+import { Link } from 'react-router-dom'
 const IdeaPool = () => {
 const {ideas}=useContext(DataContext)
   return (
@@ -15,7 +16,7 @@ const {ideas}=useContext(DataContext)
         ideas?
           ideas.map( (element) => {
               
-              return <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/>
+              return <Link to={`/ideas/${element.id}`}> <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/> </Link>
             }) : 'No Idea'
 }
       </div>

@@ -1,10 +1,12 @@
 import Navbar from "./components/Navbar";
 import { useState,useLayoutEffect,createContext } from "react";
-import {Route, Routes, useLocation} from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
 import Home from './Home'
+import IdeaRoutes from "./Routes/IdeaRoutes";
 import IdeaPage from "./components/IdeaPage";
-import Form from "./components/form"
 import IdeaPool from "./components/ideaPool";
+//import Form from "./components/form"
+
 import './input.css';
 
 export const DataContext= createContext(null);
@@ -47,10 +49,11 @@ return (
      
     <Navbar/>
      <Routes>
-      <Route path="/ideas">
+     <Route path="/ideas">
         <Route index element={<IdeaPool/>}/>
         <Route path=":id" element={<IdeaPage/>}/>
       </Route>
+      <IdeaRoutes/>
       <Route path="/" element={<Home />}/>
      </Routes>
     

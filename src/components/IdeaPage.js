@@ -5,8 +5,8 @@ import IdeaHero from './IdeaHero'
 
 const IdeaPage = () => {
 const [idea,setIdea]=useState(null)
-const param=useParams()
-const id=param.id
+const {id}=useParams()
+
 
   //Get Ideas For The Idea Pool Component
   const getIdea=async()=>{

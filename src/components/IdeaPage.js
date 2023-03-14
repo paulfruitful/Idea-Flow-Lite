@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState,useLayoutEffect } from 'react'
 import IdeaHero from './IdeaHero'
+import IdeaDescription from './IdeaDescription'
 
 const IdeaPage = () => {
 const [idea,setIdea]=useState(null)
@@ -22,9 +23,14 @@ const {id}=useParams()
   return (
     <div>
         {
+          
             idea?
-        <IdeaHero title={idea.title} tagline={idea.tagline}/>:'No Such Idea'
-        }
+            <>
+        <IdeaHero title={idea.title} tagline={idea.tagline}/>
+      <IdeaDescription description={idea.description} image={idea.image} author={idea.author} type={idea.plan} />
+     </>  :<h1>'No Such Idea'</h1>
+       }
+
     </div>
   )
 }

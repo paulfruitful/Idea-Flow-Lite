@@ -4,10 +4,8 @@ import { useState,useRef} from 'react'
 const Form = ({onForm}) => {
   const value=useRef()
  const changeHero=()=>{
-   const call=()=>{
-     onForm()
-   } 
-   call()
+    onForm()
+  
  }
   return (
     <div>

@@ -20,14 +20,16 @@ const [hero,setHero]=useState('Get Inspired')
  const getIdeas=async()=>{
    const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
    const result=await fetched.json()
-   setIdeas(result)
+   const res=result.ideas
+   setIdeas(res)
  }
 
  //Get Ideas For The Idea Pool Component
  const getTopIdeas=async()=>{
-  const fetched= await fetch('http://127.0.0.1:8000/api/topIdeas')
+  const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
   const result=await fetched.json()
-  setTopIdeas(result)
+  const res=result.topIdeas
+  setTopIdeas(res)
   
 }
 

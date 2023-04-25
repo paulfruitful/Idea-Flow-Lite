@@ -16,6 +16,7 @@ function App() {
  const [topIdeas,setTopIdeas]=useState(null)
  const [ideas,setIdeas]=useState(null)
 const [hero,setHero]=useState('Get Inspired')
+
  //Get Ideas For The Idea Pool Component
  const getIdeas=async()=>{
   try{
@@ -42,10 +43,11 @@ useLayoutEffect(()=>{
   getTopIdeas()
 
 },[])
+/*
 function  submitForm(){
   console.log('Hey')
 }
-
+*/
 return (
   <DataContext.Provider value={{topIdeas,ideas}}>    
   <>

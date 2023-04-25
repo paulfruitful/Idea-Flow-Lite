@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useState,useLayoutEffect } from 'react'
 import IdeaHero from './IdeaHero'
+import Error from './snippets/Error'
 import IdeaDescription from './IdeaDescription'
 
 const IdeaPage = () => {
@@ -28,7 +29,7 @@ const {id}=useParams()
             <>
         <IdeaHero title={idea.title} tagline={idea.tagline}/>
       <IdeaDescription description={idea.description} image={idea.image} author={idea.author} type={idea.plan} />
-     </>  :<h1>'No Such Idea'</h1>
+     </>  :<Error message={'Oops... No Such Idea Found'}/>
        }
 
     </div>

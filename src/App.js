@@ -18,11 +18,14 @@ function App() {
 const [hero,setHero]=useState('Get Inspired')
  //Get Ideas For The Idea Pool Component
  const getIdeas=async()=>{
+  try{
    const fetched= await fetch('http://127.0.0.1:8000/api/ideas')
    const result=await fetched.json()
    const res=result.ideas
   
-   setIdeas(res)
+   setIdeas(res)}catch(err){
+     console.error("Error Found:",err)
+   }
  }
 
  //Get Ideas For The Idea Pool Component

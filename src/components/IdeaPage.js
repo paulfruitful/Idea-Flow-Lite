@@ -22,7 +22,7 @@ const {id}=useParams()
   },[])
 
   return (
-    <div>
+    <div className='grid'>
         {
           
             idea?

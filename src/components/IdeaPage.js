@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useParams } from 'react-router-dom'
 import { useState,useLayoutEffect } from 'react'
 import IdeaHero from './IdeaHero'

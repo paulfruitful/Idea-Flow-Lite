@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Idea from './idea'
 import Error from './snippets/Error'
 import { Link } from 'react-router-dom'

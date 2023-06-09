@@ -17,7 +17,7 @@ const {ideas}=useContext(DataContext)
         ideas?
           ideas.map( (element) => {
               
-              return <Link to={`/ideas/${element.id}`}> <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/> </Link>
+              return  <Idea name={element.title} key={element.id} author={element.author} tagline={element.tagline}/> 
             }) : <Error message="No Ideas Available"/>
 }
       </div>

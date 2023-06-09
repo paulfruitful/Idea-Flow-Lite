@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Idea = ({id,name,author,tagline}) => {
+  
   const link=`/ideas/${id}`
   return (
     <Link to={link}>
